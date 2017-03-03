@@ -1,0 +1,3 @@
+<% @vote.each do |vote| %>
+<%= link_to "#{vote.title}", user_voting_path(vote.user_id, vote.id)%><br>
+<% end %>

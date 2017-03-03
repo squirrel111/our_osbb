@@ -1,0 +1,31 @@
+<h1><%=@vote.title%></h1>
+<%= form_tag do %>
+<%= radio_button_tag(:vote, "Yes") %>
+<%= label_tag(:agree, "Yes") %>
+<%= @agree.length%><br>
+<%= radio_button_tag(:vote, "No") %>
+<%= label_tag(:not_agree, "No") %>
+<%= @not_agree.length%><br>
+<%= submit_tag "Vote" %>
+<% end %>
+<!-- Start date -->
+<!-- <%= @vote.start_date %> -->
+<!-- <br> -->
+<!-- End Date -->
+<!-- <%= @vote.end_date %> -->
+<!-- <br> -->
+<!-- <p>Vote</p> -->
+<!-- <% if @agree.find_by(room: @user.room) == nil%> -->
+<!-- <%= link_to 'Yes', user_voting_agrees_path(params[:user_id], params[:id]), :method => :post %> -->
+<!-- <%= @agree.length%><br> -->
+<!-- <% else %> -->
+<!-- You vote for agree -->
+<!-- <%= @agree.length%><br> -->
+<!-- <% end %> -->
+<!-- <% if @not_agree.find_by(room: @user.room) == nil%> -->
+<!-- <%= link_to 'No', user_voting_not_agrees_path(params[:user_id], params[:id]), :method => :post %> -->
+<!-- <%= @not_agree.length%><br> -->
+<!-- <% else %> -->
+<!-- You vote for not agree -->
+<!-- <%= @not_agree.length%><br> -->
+<!-- <% end %> -->
